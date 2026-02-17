@@ -7,8 +7,10 @@ const createGrid = (parentElement, dimensions) => {
         for (let j = 0; j < dimensions; j++) {
             const div = document.createElement("div");
             div.setAttribute("class", "square");
+            div.style.opacity = "0";
             div.addEventListener("mouseenter", () => {
-                div.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)} ${Math.floor(Math.random() * 255)} ${Math.floor(Math.random() * 255)})`;
+                div.style.opacity = `${Number(div.style.opacity) + 0.1}`
+                div.style.backgroundColor = `hsl(${Math.floor(Math.random() * 360)} ${Math.floor(Math.random() * 100)} ${100 - (Number(div.style.opacity) * 100)})`;
             })
 
             row.appendChild(div);
