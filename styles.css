@@ -1,10 +1,10 @@
-body {
+main {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main {
+#grid {
     height: 800px;
     width: 800px;
     display: flex;

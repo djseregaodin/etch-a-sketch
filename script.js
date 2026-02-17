@@ -1,4 +1,4 @@
-const main = document.querySelector("main")
+const grid = document.querySelector("#grid")
 
 for (let i = 0; i < 16; i++) {
     const row = document.createElement("div");
@@ -11,5 +11,5 @@ for (let i = 0; i < 16; i++) {
         })
         row.appendChild(div);
     }
-    main.appendChild(row);
+    grid.appendChild(row);
 }
